@@ -60,3 +60,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.chatBody {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.messageContent p {
+  transform: translateX(-1rem);
+  letter-spacing: 0.31rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.messageMeta p {
+  font-size: 0.75rem;
+  color: #f2d253;
+  margin: 0;
+}
