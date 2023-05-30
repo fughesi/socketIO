@@ -30,6 +30,12 @@ a:hover {
   color: #535bf2;
 }
 
+.returnBTN {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: red;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -53,10 +59,70 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
   button {
     background-color: #f9f9f9;
   }
+}
+
+.chatSection {
+  display: grid;
+  grid-template-columns: minmax(400px, 1fr);
+  grid-template-rows: 6rem 15rem 3rem;
+
+  outline: 0.5px solid #fff8;
+}
+
+.chatHeader p {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0 0;
+}
+
+.chatBody {
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+  width: 80%;
+  height: 100%;
+  position: relative;
+  background-color: #fff1;
+}
+
+.chatBody div {
+  background-color: #fff9;
+  align-self: center;
+}
+
+.chatBody div:nth-child(1) {
+  height: 1px;
+  width: 75%;
+}
+
+.chatBody div:nth-child(2) {
+  height: 1px;
+  width: 75%;
+  position: absolute;
+  bottom: 0;
+}
+
+.chatBody div:nth-child(3) {
+  height: 75%;
+  width: 1px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.chatBody div:nth-child(4) {
+  height: 75%;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.chatFooter {
+  place-self: center;
 }

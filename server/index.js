@@ -10,7 +10,7 @@ app.use(cors());
 
 const io = new Server(server, {
   cors: {
-    origin: "http://127.0.0.1:5174",
+    origin: ["http://127.0.0.1:5174", "http://localhost:5174"],
     methods: ["GET", "POST"],
   },
 });

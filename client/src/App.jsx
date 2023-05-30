@@ -11,9 +11,12 @@ function App() {
 
   const joinRoom = () => {
     if (username !== "" && room !== "") {
-      socket.emit("join_room", room);
-      setShowChat(true);
+      socket.emit("join_room", room), chat();
     }
+  };
+
+  const chat = () => {
+    setShowChat((i) => !i);
   };
 
   return (
@@ -29,7 +32,7 @@ function App() {
           <button onClick={joinRoom}>ENTER</button>
         </>
       ) : (
-        <Chats socket={socket} username={username} room={room} />
+        <Chats socket={socket} username={username} room={room} chat={chat} />
       )}
     </main>
   );

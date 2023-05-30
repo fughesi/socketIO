@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function Chats({ socket, username, room }) {
+export default function Chats({ socket, username, room, chat }) {
   const [message, setMessage] = useState("");
 
   const sendMessage = async () => {
@@ -25,16 +25,25 @@ export default function Chats({ socket, username, room }) {
 
   return (
     <div>
-      <div className="chatHeader">
-        <p>LIVE CHAT</p>
+      <div className="returnBTN" onClick={() => chat()}>
+        Return to main msg board
       </div>
-      <div className="chatBody">
-        <p>{message}</p>
-      </div>
-      <div className="chatFooter">
-        <input type="text" placeholder="chat..." onChange={(e) => setMessage(e.target.value)} />
-        <button onClick={sendMessage}>&#9658;</button>
-      </div>
+      <section className="chatSection">
+        <div className="chatHeader">
+          <p>LIVE CHAT</p>
+        </div>
+        <div className="chatBody">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <p>{message}</p>
+        </div>
+        <div className="chatFooter">
+          <input type="text" placeholder="chat..." onChange={(e) => setMessage(e.target.value)} />
+          <button onClick={sendMessage}>&#9658;</button>
+        </div>
+      </section>
     </div>
   );
 }
